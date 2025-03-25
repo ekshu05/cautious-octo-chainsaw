@@ -1,0 +1,41 @@
+app:
+  name: "MyRandomApp"
+  version: "1.2.3"
+  environment: "production"
+
+database:
+  host: "localhost"
+  port: 5432
+  username: "admin"
+  password: "securepassword"
+  name: "random_db"
+
+logging:
+  level: "DEBUG"
+  file: "/var/log/myapp.log"
+
+features:
+  enable_auth: true
+  enable_caching: false
+  max_connections: 100
+  retry_attempts: 3
+
+services:
+  - name: "user_service"
+    url: "https://api.example.com/users"
+    timeout: 5000
+  - name: "payment_service"
+    url: "https://api.example.com/payments"
+    timeout: 8000
+
+secrets:
+  api_key: "s3cr3t-k3y-1234"
+  jwt_secret: "super-secret-jwt-key"
+
+metadata:
+  created_by: "ChatGPT"
+  created_at: "2025-03-25"
+  tags:
+    - "random"
+    - "yaml"
+    - "example"
